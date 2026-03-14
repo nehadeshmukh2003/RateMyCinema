@@ -146,3 +146,31 @@ color:black;
 background:#f5f5f5;
 color:black;
 }
+#authBtn{
+padding:8px 16px;
+background:#01b4e4;
+border:none;
+border-radius:6px;
+color:white;
+cursor:pointer;
+}
+
+.stars span{
+font-size:22px;
+cursor:pointer;
+color:gray;
+}
+
+.stars span.active{
+color:gold;
+}
+
+.trailerBtn{
+margin-top:10px;
+padding:6px 10px;
+border:none;
+background:#01b4e4;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
