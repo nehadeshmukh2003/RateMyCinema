@@ -1,99 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RateMyCinema</title>
 
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<header>
+<nav class="navbar">
 
-<h1>🎬 RateMyCinema</h1>
+<h2>🎬 RateMyCinema</h2>
 
-<input type="text" id="searchBar" placeholder="Search movies...">
+<ul>
 
-</header>
+<li><a href="#home">Home</a></li>
 
-<section class="movies" id="movieList">
+<li><a href="#movies">Movies</a></li>
 
-<div class="movie-card">
+<li><a href="#feedback">Feedback</a></li>
 
-<img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg">
+</ul>
 
-<h2>The Dark Knight</h2>
+<div class="nav-right">
 
-<p>Genre: Action</p>
+<input id="search" placeholder="Search movie">
 
-<p>Year: 2008</p>
+<button id="modeToggle">🌙</button>
 
-<div class="stars">
-<span data-rate="1">★</span>
-<span data-rate="2">★</span>
-<span data-rate="3">★</span>
-<span data-rate="4">★</span>
-<span data-rate="5">★</span>
-</div>
-
-<p class="rating">Rating: 0</p>
+<button id="loginBtn">Login</button>
 
 </div>
 
-
-<div class="movie-card">
-
-<img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg">
-
-<h2>Interstellar</h2>
-
-<p>Genre: Sci-Fi</p>
-
-<p>Year: 2014</p>
-
-<div class="stars">
-<span data-rate="1">★</span>
-<span data-rate="2">★</span>
-<span data-rate="3">★</span>
-<span data-rate="4">★</span>
-<span data-rate="5">★</span>
-</div>
-
-<p class="rating">Rating: 0</p>
-
-</div>
+</nav>
 
 
-<div class="movie-card">
+<section id="home" class="hero">
 
-<img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg">
+<h1>Discover Movies</h1>
 
-<h2>Joker</h2>
-
-<p>Genre: Thriller</p>
-
-<p>Year: 2019</p>
-
-<div class="stars">
-<span data-rate="1">★</span>
-<span data-rate="2">★</span>
-<span data-rate="3">★</span>
-<span data-rate="4">★</span>
-<span data-rate="5">★</span>
-</div>
-
-<p class="rating">Rating: 0</p>
-
-</div>
+<p>Search, Rate and Review Movies</p>
 
 </section>
+
+
+<section id="movies" class="movies"></section>
+
+
+<section id="feedback" class="feedback">
+
+<h2>Give Feedback</h2>
+
+<textarea id="feedbackText"></textarea>
+
+<button onclick="submitFeedback()">Submit</button>
+
+</section>
+
+
+<div id="loginModal" class="modal">
+
+<div class="modal-content">
+
+<h2>Login</h2>
+
+<input id="loginEmail" placeholder="Email">
+
+<input id="loginPass" placeholder="Password" type="password">
+
+<button onclick="login()">Login</button>
+
+<p>New user? <span onclick="openSignup()">Signup</span></p>
+
+</div>
+
+</div>
+
+
+<div id="signupModal" class="modal">
+
+<div class="modal-content">
+
+<h2>Signup</h2>
+
+<input id="name" placeholder="Name">
+
+<input id="email" placeholder="Email">
+
+<input id="pass" placeholder="Password">
+
+<button onclick="signup()">Create Account</button>
+
+</div>
+
+</div>
+
 
 <script src="script.js"></script>
 
